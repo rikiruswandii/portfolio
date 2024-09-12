@@ -5,7 +5,18 @@ export default {
     './resources/js/**/*.vue',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'galaxy-black': '#000000',
+        'dark-blue': '#1D2D50',
+        'dark-purple': '#3A0D6D',
+        'nebula-blue': '#4B2D77',
+        'meteor-blue': '#3F51B5',
+        'galaxy-aqua': '#00B2A9',
+        'star-blue': '#6CC3F0',
+        'nebula-red': '#FF0044',
+      },
+    },
   },
   plugins: [],
 }
