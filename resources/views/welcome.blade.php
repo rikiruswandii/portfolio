@@ -1,38 +1,101 @@
 <x-guest-layout>
     <!-- Hero Section -->
-    <section class="bg-blue-600 text-white text-center py-16">
-        <div class="container mx-auto">
-            <h1 class="text-4xl font-bold mb-4">Welcome to Our Landing Page</h1>
-            <p class="text-lg mb-8">We offer amazing services to help you achieve your goals.</p>
-            <a href="#services"
-                class="bg-white text-blue-600 px-6 py-3 rounded-full text-lg hover:bg-gray-100 transition">Learn More</a>
-        </div>
-    </section>
+    <section class="hero-section bg-galaxy-black text-star-blue">
+        <!-- Particles -->
+        <div id="tsparticles"></div>
 
-    <!-- About Section -->
-    <section id="about" class="py-16">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-4">About Us</h2>
-            <p class="text-lg mb-8">We are dedicated to providing the best services to our customers.</p>
-            <!-- Add more content here -->
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1 class="text-4xl font-bold mb-4">Welcome to the Galaxy</h1>
+            <p class="text-lg mb-8">Explore the universe and discover the mysteries of space with us.</p>
+            <a href="#services" class="hero-button">Learn More</a>
         </div>
-    </section>
 
-    <!-- Services Section -->
-    <section id="services" class="bg-gray-200 py-16">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-4">Our Services</h2>
-            <p class="text-lg mb-8">Discover the services we offer and how we can assist you.</p>
-            <!-- Add more content here -->
-        </div>
+        
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-            <p class="text-lg mb-8">Get in touch with us to learn more about our services.</p>
-            <!-- Add more content here -->
-        </div>
-    </section>
+    @push('scripts')
+        <!-- tsparticles script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/3.5.0/tsparticles.bundle.min.js" integrity="sha512-dAcjIzQJfQUV1WljsyVr4c7nzdqmGiNSEM8IUBvSz37GvmwbSWxXJv9MNqL+yQyI70XAk4DDz91OsyCdqyGbNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                tsParticles.load("tsparticles", {
+                    particles: {
+                        number: {
+                            value: 100,
+                            density: {
+                                enable: true,
+                                value_area: 800
+                            }
+                        },
+                        color: {
+                            value: "#ffffff"
+                        },
+                        shape: {
+                            type: "circle",
+                        },
+                        opacity: {
+                            value: 0.5,
+                            random: true,
+                            anim: {
+                                enable: true,
+                                speed: 1,
+                                opacity_min: 0.1,
+                                sync: false
+                            }
+                        },
+                        size: {
+                            value: 3,
+                            random: true,
+                            anim: {
+                                enable: true,
+                                speed: 4,
+                                size_min: 0.1,
+                                sync: false
+                            }
+                        },
+                        line_linked: {
+                            enable: false
+                        },
+                        move: {
+                            enable: true,
+                            speed: 1,
+                            direction: "none",
+                            random: false,
+                            straight: false,
+                            out_mode: "out",
+                            bounce: false,
+                            attract: {
+                                enable: false,
+                                rotateX: 600,
+                                rotateY: 1200
+                            }
+                        }
+                    },
+                    interactivity: {
+                        events: {
+                            onhover: {
+                                enable: true,
+                                mode: "repulse"
+                            },
+                            onclick: {
+                                enable: true,
+                                mode: "push"
+                            },
+                            resize: true
+                        },
+                        modes: {
+                            repulse: {
+                                distance: 200,
+                                duration: 0.4
+                            },
+                            push: {
+                                particles_nb: 4
+                            }
+                        }
+                    },
+                    retina_detect: true
+                });
+            });
+        </script>
+    @endpush
 </x-guest-layout>

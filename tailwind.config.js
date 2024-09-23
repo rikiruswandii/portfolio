@@ -1,22 +1,30 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
+import forms from '@tailwindcss/forms';
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    './resources/views/**/*.blade.php',
-    './resources/js/**/*.vue',
-  ],
-  theme: {
-    extend: {
-      colors: {
-        'galaxy-black': '#000000',
-        'dark-blue': '#1D2D50',
-        'dark-purple': '#3A0D6D',
-        'nebula-blue': '#4B2D77',
-        'meteor-blue': '#3F51B5',
-        'galaxy-aqua': '#00B2A9',
-        'star-blue': '#6CC3F0',
-        'nebula-red': '#FF0044',
-      },
+    content: [
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        './storage/framework/views/*.php',
+        './resources/views/**/*.blade.php',
+    ],
+
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+            },
+            colors: {
+                color: {
+                    primary: '#263371',
+                    secondary: '#f2bb18',
+                    base: '#FEF9D9',
+                    dark: '#181C14',
+                    light: '#FCF8F3',
+                },
+            }
+        },
     },
-  },
-  plugins: [],
-}
+
+    plugins: [forms],
+};

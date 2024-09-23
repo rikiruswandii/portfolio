@@ -19,6 +19,8 @@
     @include('public.partials.nav')
     {{ $slot }}
     @include('public.partials.footer')
+
+    @stack('scripts')
 </body>
 
 </html>
