@@ -1,17 +1,17 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-color-primary dark:text-gray-200 leading-tight">
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-    <div class="min-h-screen max-w-7xl mx-auto sm:px-6 lg:px-8 mb-4 mt-8">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-8" style="min-height: 470px">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <!-- Konten pertama -->
             <div class="w-full">
                 <div class="bg-white shadow-md rounded-lg overflow-hidden">
                     <div class="p-6">
                         <h3 class="text-lg font-semibold mb-4 text-color-primary">Selamat Datang!</h3>
-                        <table>
+                        <table class="text-gray-500 text-base">
                             <tr>
                                 <td>Nama</td>
                                 <td>&nbsp;:&nbsp;</td>
@@ -43,7 +43,7 @@
                 <div class="bg-white shadow-md rounded-lg overflow-hidden">
                     <div class="p-6">
                         <h3 class="text-lg font-semibold mb-4 text-color-primary">Informasi dasar</h3>
-                        <table>
+                        <table class="text-gray-500 text-base">
                             <tr>
                                 <td>Kota</td>
                                 <td>&nbsp;:&nbsp;</td>
@@ -87,7 +87,7 @@
                             <img src="{{ asset('assets/images/default.png') }}"
                                 class="h-36 w-36 rounded-full object-cover" alt="Avatar Default">
                         </div>
-                        <div class="mb-1 text-lg font-semibold text-primary">{{ Auth::user()->name }}</div>
+                        <div class="mb-1 text-base font-semibold text-color-primary">{{ Auth::user()->name }}</div>
                         <!-- Membungkus text "admin" dengan flex untuk posisi tengah -->
                         <div class="flex justify-center items-center">
                             <label class="text-sm font-semibold bg-green-400 rounded-full h-4 w-14 text-gray-50 text-center flex justify-center items-center">
